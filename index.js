@@ -2,7 +2,7 @@
  * @Author: Benjamin Lewis 
  * @Date: 2018-09-16 00:11:04 
  * @Last Modified by: Benjamin Lewis
- * @Last Modified time: 2018-09-16 02:34:12
+ * @Last Modified time: 2018-09-16 03:07:06
  */
 
 /* ===================================== */
@@ -27,6 +27,13 @@ const app = express(); // Create server.
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Enable CORS
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // Index page for project
 app.get('/', (req, res) => {

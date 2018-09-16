@@ -2,7 +2,7 @@
  * @Author: Benjamin Lewis 
  * @Date: 2018-09-16 01:33:19 
  * @Last Modified by: Benjamin Lewis
- * @Last Modified time: 2018-09-16 02:42:19
+ * @Last Modified time: 2018-09-16 03:01:49
  */
 
 /* ===================================== */
@@ -17,6 +17,7 @@ const presenter = require('../presenters/channel');
 /* ===================================== */
 
 const interactor = new ChannelInteractor(null);
+const baseUrl = '/channels'
 
 /* ===================================== */
 /*                 CLASS                 */
@@ -29,7 +30,7 @@ module.exports = {
     /* 
       Get all channels stored in database.
     */
-    app.get('/channels', (req, res) => {
+    app.get(baseUrl, (req, res) => {
       const channels = interactor.getChannels(null);
       const response = presenter.decorateChannels(channels);
       res.send(response);
