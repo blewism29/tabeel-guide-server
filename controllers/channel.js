@@ -2,7 +2,7 @@
  * @Author: Benjamin Lewis 
  * @Date: 2018-09-16 01:33:19 
  * @Last Modified by: Benjamin Lewis
- * @Last Modified time: 2018-09-16 03:11:53
+ * @Last Modified time: 2018-09-16 03:19:16
  */
 
 /* ===================================== */
@@ -23,6 +23,9 @@ const interactor = new ChannelInteractor(null);
 /* ===================================== */
 
 module.exports = {
+  /* 
+    Get all channels stored in database.
+  */
   getChannels: (req, res) => {
     const channels = interactor.getChannels(null);
     const response = presenter.decorateChannels(channels);

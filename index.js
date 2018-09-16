@@ -2,7 +2,7 @@
  * @Author: Benjamin Lewis 
  * @Date: 2018-09-16 00:11:04 
  * @Last Modified by: Benjamin Lewis
- * @Last Modified time: 2018-09-16 03:07:06
+ * @Last Modified time: 2018-09-16 03:17:27
  */
 
 /* ===================================== */
@@ -48,6 +48,6 @@ router.addRoutes(app);
 /*            SERVER LAUNCH              */
 /* ===================================== */
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 8082;
 const appListenCallback = () => console.log(`App running on port: ${server.address().port}`);
 const server = app.listen(PORT, appListenCallback);
