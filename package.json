@@ -4,6 +4,7 @@
   "description": "API for tabeel guide project.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "test"
   },
   "repository": {
